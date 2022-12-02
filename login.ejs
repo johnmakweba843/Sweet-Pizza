@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>  
+    
+    <div class="container-fluid my-3"> 
+        <div class="col-sm-4 text-center col-lg-3 mt-3"> 
+            <% if(messages.error){ %> 
+                <strong class="fst-italic fw-bold px-3 bg-danger text-white rounded-pill"><%= messages.error %></strong>
+          <%  } %> 
+        </div>
+    </div>
+
+   <div class="container-fluid my-3"> 
+      <div class="row align-items-center justify-content-center mt-3"> 
+        <div class="col-sm-4 text-center col-lg-3 mt-3"> 
+            <h2 class="display-2 text-muted fst-italic fw-bold shadow-lg">LOGIN</h2>
+        </div> 
+        <form action="/login" method="post"> 
+            <div class="col-sm-4 text-start col-lg-3 mt-3"> 
+                <label for="email" class="fst-italic fw-bold">Email</label> 
+                <input type="email" class="rounded-pill px-3 mt-3 fst-italic fw-bold border-primary" name = "email" required>
+            </div> 
+
+            <div class="col-sm-4 text-start col-lg-3 mt-3"> 
+                <label for="password" class="fst-italic fw-bold">Password</label> 
+                <input type="password" class="rounded-pill px-3 mt-3 fst-italic fw-bold border-primary" name = "password" required>
+            </div> 
+
+            <div class="col-sm-4 text-center col-lg-3 mt-3"> 
+                <input type="submit" class="btn btn rounded-pill fst-italic fw-bold px-3 bg-info text-white" value = "LOGIN">
+            </div> 
+
+            <div class="col-sm-4 text-center col-lg-3 mt-3"> 
+               <p class="fst-italic fw-bold text-secondary">I dont have an account<a href="/register" class="text-decoration-none fst-italic fw-bold text-success px-3">create an account</a></p>
+            </div>
+        </form>
+      </div>
+   </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
